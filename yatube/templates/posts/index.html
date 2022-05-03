@@ -1,0 +1,21 @@
+<!-- templates/posts/index.html -->
+<!DOCTYPE html> 
+{% extends 'base.html'%}
+<html lang="ru">
+  <head>
+  </head>
+  <body>
+    <header>
+      {% block title %}
+      <h1>{{text}}</h1>
+      {% endblock %}
+    </header>
+    <main>
+    {% block content %}
+    <a href='{% url 'posty:index' %}'
+      Ссылка для возврата на главную
+    </a>
+    {% endblock %}
+    </main>
+  </body>
+</html> 
